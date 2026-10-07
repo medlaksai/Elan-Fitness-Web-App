@@ -545,3 +545,46 @@ button:focus-visible {
   font-size: 13px;
   color: #94A3B8;
 }
+
+
+
+.centent {
+  width: 500px;
+  margin: auto;
+  padding: 30px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row,
+.subs {
+  padding: 10px;
+  border: 1px solid #ff0606;
+  border-radius: 5px;
+}
+
+.submit {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #FF6B2C;
+  border: 1px solid #FF6B2C;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+}
+.submit:hover {
+      background-color: #F05817;
+}
