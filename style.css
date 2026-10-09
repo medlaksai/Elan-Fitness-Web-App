@@ -1,4 +1,4 @@
-
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -353,6 +353,7 @@ button:focus-visible {
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(15, 27, 45, 0.15);
+
 }
 
 .carte-programme {
@@ -545,3 +546,126 @@ button:focus-visible {
   font-size: 13px;
   color: #94A3B8;
 }
+.socialmediaPara { 
+
+  display: flex;
+  padding: 10px;
+  font-size:  15px;
+  color: red;
+}
+.icons { 
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .conteneur {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .en-tete-contenu {
+    height: auto;
+    min-height: 80px;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .menu {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-contenu {
+    flex-direction: column;
+  }
+
+  .hero-texte {
+    width: 100%;
+  }
+
+  .hero-texte h1 {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .boutons {
+    flex-direction: column;
+  }
+
+  .bouton {
+    width: 100%;
+  }
+
+  .chiffres {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .chiffre + .chiffre {
+    border-left: none;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 24px;
+  }
+
+  .cartes {
+    flex-direction: column;
+  }
+
+  .apropos-contenu {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .apropos-texte h2 {
+    font-size: 30px;
+  }
+
+  .apropos-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .valeurs {
+    flex-direction: column;
+  }
+
+  .pied-haut,
+  .pied-bas {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .menu-pied {
+    flex-wrap: wrap;
+  }
+
+  .icons {
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+}
+.bouton {
+  transition: all 0.3s ease;
+}
+
+.bouton:hover {
+  transform: translateY(-2px);
+}
+
