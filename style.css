@@ -1,4 +1,6 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,15 +12,18 @@ html {
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #1F2937;
   background-color: #F7F8FA;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Poppins', Arial, sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", Arial, sans-serif;
   color: #0F1B2D;
 }
 
@@ -34,6 +39,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a:focus-visible,
@@ -88,6 +94,8 @@ button:focus-visible {
   margin-bottom: 12px;
 }
 
+
+
 .bouton {
   display: inline-block;
   padding: 14px 28px;
@@ -96,6 +104,12 @@ button:focus-visible {
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s ease,
+              transform 0.3s ease;
+}
+
+.bouton:hover {
+  transform: translateY(-2px);
 }
 
 .bouton-principal {
@@ -118,6 +132,8 @@ button:focus-visible {
   background-color: #F3F4F6;
 }
 
+
+
 .cartes {
   display: flex;
   gap: 24px;
@@ -125,6 +141,7 @@ button:focus-visible {
 
 .carte {
   flex: 1;
+  min-width: 0;
   background-color: #FFFFFF;
   border: 1px solid #E5E7EB;
   border-radius: 12px;
@@ -134,6 +151,7 @@ button:focus-visible {
 .icone {
   width: 48px;
   height: 48px;
+  flex-shrink: 0;
   background-color: #FFF0EA;
   border-radius: 8px;
   display: flex;
@@ -157,31 +175,37 @@ button:focus-visible {
   height: 16px;
 }
 
+
+
 .en-tete {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   background-color: #FFFFFF;
   border-bottom: 1px solid #E5E7EB;
 }
 
 .en-tete-contenu {
-  height: 80px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-family: 'Poppins', Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #0F1B2D;
+  flex-shrink: 0;
+  width: 200;
+}
+.logo img{
+  width: 200px;       
+  height: auto;
 }
 
 .logo::after {
+  display: inline-block;
   width: 10px;
   height: 10px;
   margin-left: 8px;
@@ -191,7 +215,10 @@ button:focus-visible {
 
 .menu {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .menu a {
@@ -210,6 +237,7 @@ button:focus-visible {
   border-bottom-color: #FF6B2C;
 }
 
+
 .hero {
   padding: 64px 0 96px;
 }
@@ -217,11 +245,12 @@ button:focus-visible {
 .hero-contenu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 48px;
 }
 
 .hero-texte {
   flex: 7;
+  min-width: 0;
 }
 
 .hero-texte h1 {
@@ -248,12 +277,15 @@ button:focus-visible {
 .hero-image {
   flex: 5;
   min-width: 0;
+  width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 16px;
   border: 1px solid #E5E7EB;
   box-shadow: 0 10px 25px rgba(15, 27, 45, 0.15);
 }
+
+
 
 .chiffres {
   display: flex;
@@ -277,11 +309,13 @@ button:focus-visible {
 }
 
 .chiffre-nombre {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 36px;
   font-weight: 800;
   color: #FF6B2C;
 }
+
+
 
 .carte-avantage {
   padding: 24px;
@@ -303,6 +337,8 @@ button:focus-visible {
   line-height: 1.6;
 }
 
+
+
 .apropos-contenu {
   display: flex;
   align-items: center;
@@ -311,6 +347,7 @@ button:focus-visible {
 
 .apropos-texte {
   flex: 7;
+  min-width: 0;
 }
 
 .apropos-texte h2 {
@@ -327,6 +364,7 @@ button:focus-visible {
 
 .valeurs {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 32px;
 }
@@ -340,7 +378,7 @@ button:focus-visible {
   background-color: #FFFFFF;
   border: 1px solid #E5E7EB;
   border-radius: 12px;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #0F1B2D;
@@ -349,12 +387,14 @@ button:focus-visible {
 .apropos-image {
   flex: 5;
   min-width: 0;
+  width: 100%;
   height: 360px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(15, 27, 45, 0.15);
-
 }
+
+
 
 .carte-programme {
   display: flex;
@@ -383,6 +423,10 @@ button:focus-visible {
 .programme-corps p {
   font-size: 15px;
   color: #4B5563;
+}
+
+.programme-corps h3 + p {
+  margin-bottom: 16px;
 }
 
 .etiquette {
@@ -421,14 +465,12 @@ button:focus-visible {
   color: #0F1B2D;
 }
 
-.programme-corps h3 + p {
-  margin-bottom: 16px;
-}
-
 .duree img {
   width: 16px;
   height: 16px;
 }
+
+
 
 .formules {
   margin-top: 96px;
@@ -447,14 +489,14 @@ button:focus-visible {
 
 .prix {
   margin: 8px 0 16px;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 30px;
   font-weight: 800;
   color: #FF6B2C;
 }
 
 .prix span {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #4B5563;
@@ -475,7 +517,7 @@ button:focus-visible {
   padding-left: 28px;
   margin-bottom: 12px;
   font-size: 15px;
-  background-image: url('img/icone-check.svg');
+  background-image: url("img/icone-check.svg");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 16px;
@@ -502,7 +544,43 @@ button:focus-visible {
   font-weight: 700;
   text-transform: uppercase;
   color: #FFFFFF;
+  white-space: nowrap;
 }
+
+
+
+.socialmediaPara {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 15px;
+  color: red;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 20px;
+}
+
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icons a:hover {
+  color: #FF6B2C;
+  transform: translateY(-2px);
+}
+
+
 
 .pied-de-page {
   padding: 48px 0 32px;
@@ -514,6 +592,7 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -539,70 +618,154 @@ button:focus-visible {
   color: #E2E8F0;
 }
 
+.menu-pied a:hover {
+  color: #FF6B2C;
+}
+
 .pied-bas {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
   margin-top: 24px;
   font-size: 13px;
   color: #94A3B8;
 }
-.socialmediaPara { 
 
-  display: flex;
-  padding: 10px;
-  font-size:  15px;
-  color: red;
+
+
+@media screen and (max-width: 1023px) {
+  .conteneur {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .en-tete-contenu {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    gap: 16px;
+  }
+
+  .hero-contenu {
+    gap: 32px;
+  }
+
+  .hero-texte h1 {
+    font-size: 38px;
+  }
+
+  .hero-image {
+    height: 320px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .cartes {
+    flex-wrap: wrap;
+  }
+
+  .cartes > .carte {
+    flex: 1 1 calc(50% - 12px);
+  }
+
+  .apropos-contenu {
+    gap: 32px;
+  }
+
+  .apropos-texte h2 {
+    font-size: 30px;
+  }
+
+  .apropos-image {
+    height: 320px;
+  }
+
+  .valeurs {
+    flex-wrap: wrap;
+  }
+
+  .valeur {
+    min-width: 0;
+  }
+
+  .formules {
+    margin-top: 64px;
+  }
 }
-.icons { 
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
-  justify-content: flex-end;
-  padding: 20px;
-}
 
-@media (max-width: 768px) {
 
+
+@media screen and (max-width: 767px) {
   .conteneur {
     padding-left: 16px;
     padding-right: 16px;
   }
 
+  .section {
+    padding: 56px 0;
+  }
+
+  .section-titre {
+    margin-bottom: 36px;
+  }
+
+  .section-titre h2 {
+    font-size: 28px;
+  }
+
+  .section-titre h3 {
+    font-size: 23px;
+  }
+
   .en-tete-contenu {
-    height: auto;
-    min-height: 80px;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+  }
+
+  .logo {
+    font-size: 22px;
   }
 
   .menu {
-    gap: 16px;
-    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 64px;
   }
 
   .hero-contenu {
     flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
   }
 
-  .hero-texte {
+  .hero-texte,
+  .apropos-texte {
     width: 100%;
   }
 
   .hero-texte h1 {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 18px;
   }
 
   .hero-description {
     font-size: 16px;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: 300px;
+    margin-bottom: 24px;
   }
 
   .boutons {
@@ -613,59 +776,122 @@ button:focus-visible {
     width: 100%;
   }
 
+  .hero-image {
+    width: 100%;
+    height: 260px;
+  }
+
   .chiffres {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 24px;
+  }
+
+  .chiffre-nombre {
+    font-size: 30px;
   }
 
   .chiffre + .chiffre {
     border-left: none;
     border-top: 1px solid #E5E7EB;
-    padding-top: 24px;
+    padding-top: 20px;
   }
 
   .cartes {
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .cartes > .carte {
+    flex: 1 1 auto;
+    width: 100%;
   }
 
   .apropos-contenu {
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
   }
 
   .apropos-texte h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .apropos-image {
     width: 100%;
-    height: 300px;
+    height: 260px;
   }
 
   .valeurs {
     flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .valeur {
+    width: 100%;
+  }
+
+  /* Programs */
+  .carte-programme > img {
+    height: 190px;
+  }
+
+  /* Pricing */
+  .formules {
+    margin-top: 48px;
+  }
+
+  .formule {
+    padding: 24px;
+  }
+
+  .prix {
+    font-size: 28px;
+  }
+
+  .pied-de-page {
+    padding: 40px 0 24px;
   }
 
   .pied-haut,
   .pied-bas {
     flex-direction: column;
+    align-items: flex-start;
     gap: 24px;
   }
 
   .menu-pied {
+    justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 16px;
   }
 
   .icons {
     justify-content: flex-start;
-    padding: 20px 0;
+    padding: 16px 0;
+    gap: 16px;
+  }
+
+  .socialmediaPara {
+    padding: 8px 0;
+  }
+
+  .pied-bas {
+    margin-top: 20px;
   }
 }
-.bouton {
-  transition: all 0.3s ease;
-}
 
-.bouton:hover {
-  transform: translateY(-2px);
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
