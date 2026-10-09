@@ -832,12 +832,10 @@ button:focus-visible {
     width: 100%;
   }
 
-  /* Programs */
   .carte-programme > img {
     height: 190px;
   }
 
-  /* Pricing */
   .formules {
     margin-top: 48px;
   }
